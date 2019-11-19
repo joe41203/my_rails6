@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/tmp/my_rails6_deployment
+    destination: /mnt/app/my_rails6
 hooks:
   ApplicationStop:
     - location: bin/codedeploy/application_stop.sh
