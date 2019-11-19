@@ -5,7 +5,7 @@ set -ex
 project=my_rails6
 user=ec2-user
 
-mkdir -p /mnt/app 
+sudo mkdir -p /mnt/app 
 
 sudo chown -R $user:$user /mnt/app
 
