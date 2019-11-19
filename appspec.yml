@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/tmp/my_rails6_deployment
+hooks:
+  ApplicationStop:
+    - location: bin/codedeploy/application_stop.sh
+      timeout: 60
+      runas: root
+  ApplicationStart:
+    - location: bin/codedeploy/application_start.sh
+      timeout: 180
+      runas: root
