@@ -8,6 +8,13 @@ hooks:
     - location: bin/codedeploy/application_stop.sh
       timeout: 60
       runas: root
+  BeforeInstall:
+    - location: bin/codedeploy/before_install.sh
+      timeout: 180
+  AfterInstall:
+    - location: bin/codedeploy/after_install.sh
+      timeout: 1800
+      runas: ec2-user
   ApplicationStart:
     - location: bin/codedeploy/application_start.sh
       timeout: 180
